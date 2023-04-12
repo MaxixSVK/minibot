@@ -2,13 +2,23 @@
 
 Discord bot made in discord.js 14 with support for slash commands, open ai api, discord build in automod and more.
 
+## Features
+
+ - AI - you can connect bot to Open AI api to ask him questions or generate images
+ - Automod - you can configure discord build in automod
+ - Moderation - clear, ban and kick command
+ - Report system - system for reporting users/messages on your server for easy moderation
+ - Poll - easy polls with one command
+ - Easy setup - Setup a bot with one command
+ - And more basic commands 
+
 ## Installation
 
- - You need to have installed node.js on your computer (tested version 18.15.0).
+ - You need to have installed node.js on your computer (tested 18.15.0)
 
- - Clone repository or download ZIP
+ - Clone repository:
 ```
-git clone https://github.com/MaxixSVK/minibot
+git clone
 ``` 
 - Install dependencies:
 
@@ -30,15 +40,19 @@ node .\deploy-commands.js
 
 ## Usage
 
-```
-node .
+```javascript
+node . //start a bot
 ```
 - Optional (after adding or deleting slash commands)
 
-```
+```javascript
 node .\deploy-commands.js
 ```
 
+- Setup bot on server (slash command)
+```
+/setup
+```
 ## Customisation
  - You can edit config.json file
  - Or remake whole bot  :D
