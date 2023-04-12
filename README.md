@@ -8,7 +8,7 @@ Discord bot made in discord.js 14 with support for slash commands, open ai api, 
 
  - Clone repository:
 ```
-git clone
+git clone https://github.com/MaxixSVK/minibot
 ``` 
 - Install dependencies:
 
