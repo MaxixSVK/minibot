@@ -31,7 +31,7 @@ node .\deploy-commands.js
 ## Usage
 
 ```
-node . //start a bot
+node .
 ```
 - Optional (after adding or deleting slash commands)
 
