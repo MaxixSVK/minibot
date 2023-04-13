@@ -1,7 +1,7 @@
 {
-  "name": "bot",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mini-bot",
+  "version": "0.25",
+  "description": "Discord bot made in discord.js v14 with support for slash commands, open ai api, discord build in automod and more.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "Maxix",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.9.0",
     "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   }
