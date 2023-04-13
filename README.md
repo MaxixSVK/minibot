@@ -1,4 +1,4 @@
-# Mini bot :D
+# Mini bot
 
 ## Discord bot made in discord.js v14.
 Please note that this bot is still under development
