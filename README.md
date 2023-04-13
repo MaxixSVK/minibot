@@ -1,6 +1,7 @@
 # Mini bot
 
-Discord bot made in discord.js v14.
+## Discord bot made in discord.js v14.
+Please note that this bot is still under development
 
 ## Features
 
@@ -9,12 +10,12 @@ Discord bot made in discord.js v14.
  - Moderation - clear, ban and kick command
  - Report system - system for reporting users/messages on your server for easy moderation
  - Poll - easy polls with one command
- - Easy setup - Setup a bot with one command
- - And more basic commands 
+ - Easy setup - set up a bot with a single command
+ - And other basic commands
 
 ## Installation
 
- - You need to have installed node.js on your computer (tested version 18.15.0)
+ - You need to have [node.js](https://nodejs.org/) installed on your machine (tested version 18.15.0)
 
  - Clone repository or download ZIP
 ```
@@ -39,11 +40,11 @@ node .\deploy-commands.js
 ```
 
 ## Usage
-
+ - Start a bot
 ```
 node .
 ```
-- Optional (after adding or deleting slash commands)
+- After deleting or adding slash commands
 
 ```
 node .\deploy-commands.js
@@ -53,9 +54,9 @@ node .\deploy-commands.js
 ```
 /setup
 ```
-## Customisation
- - You can edit config.json file
- - Or remake whole bot  :D
+## Customization
+ - You can edit the config.json file
+ - Or rebuild the whole bot :D
 
 ## Contributing
 
