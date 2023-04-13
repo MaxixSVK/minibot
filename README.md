@@ -55,8 +55,7 @@ node .\deploy-commands.js
 /setup
 ```
 ## Customization
- - You can edit the config.json file
- - Or rebuild the whole bot :D
+ - For easy customization you can edit confing.json
 
 ## Contributing
 
