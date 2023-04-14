@@ -42,9 +42,9 @@ module.exports = {
 
         if (member.roles.highest.position >= interaction.member.roles.highest.position)
             if (interaction.guild.owner !== interaction.author)
-                return interaction.reply({ embeds: [lowembed] })
+                return interaction.reply({ embeds: [lowembed], ephemeral: true })
 
         member.ban({ days: time, reason: reason })
-        await interaction.reply({ embeds: [banembed] });
+        await interaction.reply({ embeds: [banembed], ephemeral: true });
     },
 };
