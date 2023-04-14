@@ -10,11 +10,11 @@ module.exports = {
         const botembed = new EmbedBuilder()
             .setColor(config.Color)
             .setTitle("Mini bot")
-            .setURL("https://discord.js.org/")
+            .setURL("https://github.com/MaxixSVK/minibot")
             .setDescription("ALPHA version - new AI support ")
             .addFields(
                 { name: "Version:", value: "0.25", inline: true },
-                { name: "Author:", value: "Maxix#0839", inline: true },
+                { name: "Author:", value: "Maxix", inline: true },
             )
             .setImage("https://i.imgur.com/AfFp7pu.png")
 
