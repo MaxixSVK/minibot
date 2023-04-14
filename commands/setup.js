@@ -52,6 +52,6 @@ module.exports = {
             })
         }
 
-        await interaction.reply({ embeds: [setupembed] });
+        await interaction.reply({ embeds: [setupembed], ephemeral: true });
     },
 };
