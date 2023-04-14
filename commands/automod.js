@@ -42,7 +42,7 @@ module.exports = {
         switch (sub) {
             case "keyword":
                 await guild.autoModerationRules.create({
-                    name: `${word}`,
+                    name: "Keyword block",
                     creatorId: process.env.botId,
                     enabled: true,
                     eventType: 1,
