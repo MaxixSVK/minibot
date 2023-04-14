@@ -57,6 +57,11 @@ node .\deploy-commands.js
 ## Customization
  - For easy customization you can edit confing.json
 
+## Future updates
+ - Ticket system
+ - Fix automod bugs
+ - More features
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
