@@ -24,7 +24,7 @@ module.exports = {
             n: 1,
             size: "1024x1024",
         });
-        //need remake
+        
         await interaction.editReply(response.data.data[0].url);
     }
 }
