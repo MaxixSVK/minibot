@@ -36,9 +36,9 @@ module.exports = {
 
         if (member.roles.highest.position >= interaction.member.roles.highest.position)
             if (interaction.guild.owner !== interaction.author)
-                return interaction.reply({ embeds: [lowembed] })
+                return interaction.reply({ embeds: [lowembed], ephemeral: true })
 
         member.kick({ reason: reason })
-        await interaction.reply({ embeds: [kickembed] });
+        await interaction.reply({ embeds: [kickembed], ephemeral: true });
     },
 };
