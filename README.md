@@ -54,6 +54,12 @@ node .\deploy-commands.js
 ```
 /setup
 ```
+
+## Website
+ - If you want website for your bot check out my other [project](https://github.com/MaxixSVK/discord-bot-web-template.git) or download it here
+```
+git clone https://github.com/MaxixSVK/discord-bot-web-template
+```
 ## Customization
  - For easy customization you can edit confing.json
 
