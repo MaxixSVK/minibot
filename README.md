@@ -36,7 +36,7 @@ OPENAI_API_KEY=your open ai api key
 ```
 - Deploy slash commands
 ```
-node .\deploy-commands.js
+node deploy-commands.js
 ```
 
 ## Usage
