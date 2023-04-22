@@ -47,7 +47,7 @@ node .
 - After deleting or adding slash commands
 
 ```
-node .\deploy-commands.js
+node deploy-commands.js
 ```
 
 - Setup bot on server (slash command)
