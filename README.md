@@ -15,7 +15,7 @@ Please note that this bot is still under development
 
 ## Installation
 
- - You need to have [node.js](https://nodejs.org/) installed on your machine (tested version 18.15.0)
+ - You need to have [node.js](https://nodejs.org/) installed on your machine (tested version 18.16.0)
 
  - Clone repository or download ZIP
 ```
