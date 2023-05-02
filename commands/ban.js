@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("ban")
         .setDescription("Ban user from the server..")
-        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
+        .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
         .addUserOption(option =>
             option
                 .setName("target")
@@ -13,18 +13,12 @@ module.exports = {
         .addStringOption(option =>
             option
                 .setName("reason")
-                .setDescription("Reason of the ban."))
-        .addIntegerOption(option =>
-            option
-                .setName("time")
-                .setDescription("How long should be user banned.")),
+                .setDescription("Reason of the ban.")),
     async execute(interaction) {
 
         const user = interaction.options.getUser('target');
-        const reason = interaction.options.getString("reason");
-        const time = interaction.options.getInteger("time");
-
         const member = await interaction.guild.members.fetch(user.id)
+        const reason = interaction.options.getString("reason") || "No reason provided";
 
         const lowembed = new EmbedBuilder()
             .setColor("Red")
@@ -37,14 +31,13 @@ module.exports = {
             .setDescription(`The ${user} was banned from server`)
             .addFields(
                 { name: "Reason:", value: `${reason}`, inline: true },
-                { name: "Duration:", value: `${time}`, inline: true },
             )
 
         if (member.roles.highest.position >= interaction.member.roles.highest.position)
             if (interaction.guild.owner !== interaction.author)
                 return interaction.reply({ embeds: [lowembed], ephemeral: true })
 
-        member.ban({ days: time, reason: reason })
+        member.ban({ reason })
         await interaction.reply({ embeds: [banembed], ephemeral: true });
     },
 };
