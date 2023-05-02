@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("kick")
         .setDescription("Kick user from the server.")
-        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
+        .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers)
         .addUserOption(option =>
             option
                 .setName("target")
@@ -17,7 +17,7 @@ module.exports = {
     async execute(interaction) {
 
         const user = interaction.options.getUser('target');
-        const reason = interaction.options.getString("reason");
+        const reason = interaction.options.getString("reason") || "No reason provided";
 
         const member = await interaction.guild.members.fetch(user.id)
 
@@ -38,7 +38,7 @@ module.exports = {
             if (interaction.guild.owner !== interaction.author)
                 return interaction.reply({ embeds: [lowembed], ephemeral: true })
 
-        member.kick({ reason: reason })
+        member.kick(reason)
         await interaction.reply({ embeds: [kickembed], ephemeral: true });
     },
 };
