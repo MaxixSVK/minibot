@@ -7,14 +7,17 @@ module.exports = {
 
         if (interaction.customId === "CreateTicket") {
             let x = Math.floor((Math.random() * 100000) + 1);
-            const roleid = interaction.guild.roles.cache.find(role => role.name);
             interaction.guild.channels.create({
                 name: `Ticket${x}`,
                 type: ChannelType.GuildText,
                 permissionOverwrites: [
                     {
-                        id: roleid.guild.id,
+                        id: interaction.guild.id,
                         deny: [PermissionsBitField.Flags.ViewChannel],
+                    },
+                    {
+                        id: interaction.user.id,
+                        allow: [PermissionsBitField.Flags.ViewChannel],
                     },
                 ],
             })
