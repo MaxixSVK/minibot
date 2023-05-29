@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, ChannelType, EmbedBuilder, PermissionsBitField } = require("discord.js");
+const { SlashCommandBuilder, PermissionFlagsBits, ChannelType, EmbedBuilder, PermissionsBitField, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -20,6 +20,19 @@ module.exports = {
             .setTitle("Setup has been alredy completed.")
             .setDescription("If you don't see a channels (reports and tickets), check browse channels feature.")
             .setColor("Yellow")
+
+        const ticketmessageembed = new EmbedBuilder()
+            .setTitle("ha")
+            .setDescription("ha")
+            .setColor("Green")
+
+        const createticketbutton = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setCustomId('CreateTicket')
+                    .setLabel('Create Ticket')
+                    .setStyle(ButtonStyle.Primary),
+            );
 
         if ((reportschannel) && (ticketchannel)) {
             interaction.reply({ embeds: [alredyembed], ephemeral: true });
@@ -50,6 +63,8 @@ module.exports = {
                     },
                 ],
             })
+            const ticketchannelmessage = interaction.guild.channels.cache.get('1112700323379826698');
+            ticketchannelmessage.send({ embeds: [ticketmessageembed], components: [createticketbutton] });
         }
 
         await interaction.reply({ embeds: [setupembed], ephemeral: true });
