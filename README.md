@@ -6,10 +6,11 @@ Please note that this bot is still under development
 ## Features
 
  - AI - you can connect bot to Open AI api to ask him questions or generate images
- - Automod - you can configure discord build in automod
+ - Ticket system - easy way to provide support
  - Moderation - clear, ban and kick command
  - Report system - system for reporting users/messages on your server for easy moderation
  - Poll - easy polls with one command
+ - Automod - you can configure discord build in automod
  - Easy setup - set up a bot with a single command
  - And other basic commands
 
