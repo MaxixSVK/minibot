@@ -6,6 +6,7 @@ module.exports = {
         .setName("server")
         .setDescription("See info about server."),
     async execute(interaction) {
+        
         const server = interaction.guild.name
         const owner = await interaction.guild.fetchOwner()
         const members = interaction.guild.memberCount
@@ -14,6 +15,7 @@ module.exports = {
         const channels = await interaction.guild.channels.fetch()
         const roles = await interaction.guild.roles.fetch()
         const emojis = await interaction.guild.emojis.fetch()
+
         const botembed = new EmbedBuilder()
             .setColor(config.Color)
             .setTitle(`${server}`)
