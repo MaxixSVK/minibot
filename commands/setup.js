@@ -10,7 +10,6 @@ module.exports = {
 
         const reportschannel = interaction.guild.channels.cache.find(channel => channel.name == "reports");
         const ticketchannel = interaction.guild.channels.cache.find(channel => channel.name == "tickets");
-        const roleid = interaction.guild.roles.cache.find(role => role.name);
 
         const setupembed = new EmbedBuilder()
             .setTitle("Setup has been completed.")
@@ -46,7 +45,7 @@ module.exports = {
                 type: ChannelType.GuildText,
                 permissionOverwrites: [
                     {
-                        id: roleid.guild.id,
+                        id: interaction.guild.id,
                         deny: [PermissionsBitField.Flags.ViewChannel],
                     },
                 ],
@@ -59,7 +58,7 @@ module.exports = {
                 type: ChannelType.GuildText,
                 permissionOverwrites: [
                     {
-                        id: roleid.guild.id,
+                        id: interaction.guild.id,
                         deny: [PermissionsBitField.Flags.SendMessages],
                     },
                 ],
