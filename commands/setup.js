@@ -6,6 +6,7 @@ module.exports = {
         .setDescription("Setup all features for server.")
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
     async execute(interaction) {
+        await interaction.deferReply();
 
         const reportschannel = interaction.guild.channels.cache.find(channel => channel.name == "reports");
         const ticketchannel = interaction.guild.channels.cache.find(channel => channel.name == "tickets");
@@ -22,8 +23,8 @@ module.exports = {
             .setColor("Yellow")
 
         const ticketmessageembed = new EmbedBuilder()
-            .setTitle("ha")
-            .setDescription("ha")
+            .setTitle("Ticket")
+            .setDescription("A rigt way to contact a server support.")
             .setColor("Green")
 
         const createticketbutton = new ActionRowBuilder()
@@ -35,7 +36,7 @@ module.exports = {
             );
 
         if ((reportschannel) && (ticketchannel)) {
-            interaction.reply({ embeds: [alredyembed], ephemeral: true });
+            interaction.reply({ embeds: [alredyembed] });
             return
         }
 
@@ -63,10 +64,14 @@ module.exports = {
                     },
                 ],
             })
-            const ticketchannelmessage = interaction.guild.channels.cache.get('1112700323379826698');
-            ticketchannelmessage.send({ embeds: [ticketmessageembed], components: [createticketbutton] });
-        }
 
-        await interaction.reply({ embeds: [setupembed], ephemeral: true });
+            setTimeout(() => {
+                const ticketchannel = interaction.guild.channels.cache.find(channel => channel.name == "tickets");
+                ticketchannel.send({ embeds: [ticketmessageembed], components: [createticketbutton] });
+               }, 1500);
+            }
+
+
+        await interaction.followUp({ embeds: [setupembed] });
     },
 };

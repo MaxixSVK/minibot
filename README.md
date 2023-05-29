@@ -64,7 +64,7 @@ git clone https://github.com/MaxixSVK/discord-bot-web-template
  - For easy customization you can edit confing.json
 
 ## Future updates
- - Ticket system
+ - Better Ticket system
  - Fix automod bugs
  - More features
 
