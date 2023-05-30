@@ -66,8 +66,7 @@ git clone https://github.com/MaxixSVK/discord-bot-web-template
 
 ## Future updates
  - Better Ticket system
- - Fix automod bugs
- - More features
+ - New automoderation features
 
 ## Contributing
 
