@@ -15,21 +15,10 @@ module.exports = {
                         .setDescription("The word you want to block.")
                         .setRequired(true))
 
-        )
-        .addSubcommand((subcommand) =>
-            subcommand
-                .setName("mention-spam")
-                .setDescription("Block mention spam.")
-                .addIntegerOption(option =>
-                    option
-                        .setName("number")
-                        .setDescription("How many mentions can be in one message.")
-                        .setRequired(true))),
-
+        ),
     async execute(interaction) {
 
         const word = interaction.options.getString("word");
-        const number = interaction.options.getInteger("number");
 
         const successembed = new EmbedBuilder()
             .setColor("Green")
@@ -64,37 +53,6 @@ module.exports = {
                     setTimeout(async () => {
                         console.log(err);
                         await interaction.reply("error")
-                    }, 2000)
-                });
-
-                interaction.reply({ embeds: [successembed], ephemeral: true })
-                break;
-
-
-            case "mention-spam":
-                await guild.autoModerationRules.create({
-                    name: `Prevent spam mentions`,
-                    creatorId: process.env.botId,
-                    enabled: true,
-                    eventType: 1,
-                    triggerType: 5,
-                    triggerMetadata:
-                    {
-                        mentionTotalLimit: number
-                    },
-                    actions: [
-                        {
-                            type: 1,
-                            metadata: {
-                                channel: interaction.channel,
-                                durationSeconds: 10,
-                            }
-                        }
-                    ]
-                }).catch(async err => {
-                    setTimeout(async () => {
-                        console.log(err);
-                        await interaction.editReply("error")
                     }, 2000)
                 });
 
