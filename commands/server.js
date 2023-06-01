@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, time } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, } = require("discord.js");
 const config = require("../config.json");
 
 module.exports = {
@@ -6,7 +6,6 @@ module.exports = {
         .setName("server")
         .setDescription("See info about server."),
     async execute(interaction) {
-        
         const server = interaction.guild.name
         const owner = await interaction.guild.fetchOwner()
         const members = interaction.guild.memberCount

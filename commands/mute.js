@@ -21,7 +21,6 @@ module.exports = {
                 .setName("reason")
                 .setDescription("Reason of the mute.")),
     async execute(interaction) {
-
         const user = interaction.options.getUser('target');
         const member = await interaction.guild.members.fetch(user.id)
         const reason = interaction.options.getString("reason") || "No reason provided";
@@ -36,7 +35,7 @@ module.exports = {
         const muteembed = new EmbedBuilder()
             .setColor("Green")
             .setTitle("Muted")
-            .setDescription(`The ${user} was muted from server`)
+            .setDescription(`The ${user} was muted.`)
             .addFields(
                 { name: "Reason:", value: `${reason}`, inline: true },
                 { name: "Duration:", value: `${time}`, inline: true },

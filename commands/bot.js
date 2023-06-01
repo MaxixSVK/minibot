@@ -6,18 +6,16 @@ module.exports = {
         .setName("bot")
         .setDescription("See info about bot."),
     async execute(interaction) {
-
         const botembed = new EmbedBuilder()
             .setColor(config.Color)
             .setTitle("Mini bot")
             .setURL("https://github.com/MaxixSVK/minibot")
-            .setDescription("ALPHA version - new AI support ")
+            .setDescription("ALPHA version")
             .addFields(
-                { name: "Version:", value: "0.25", inline: true },
+                { name: "Version:", value: "0.3", inline: true },
                 { name: "Author:", value: "Maxix", inline: true },
             )
             .setImage("https://i.imgur.com/AfFp7pu.png")
-
 
         await interaction.reply({ embeds: [botembed] });
     },

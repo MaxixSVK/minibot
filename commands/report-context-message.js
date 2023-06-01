@@ -17,7 +17,7 @@ module.exports = {
 
         const reportedembed = new EmbedBuilder()
         .setTitle(`The message has been reported`)
-        .setDescription("Using server apps")
+        .setDescription(`<@${interaction.member.id}> reported a message using server apps.`)
         .setColor("Red")
         .addFields(
             { name: "Who's message has been reported:", value: `${interaction.targetMessage.author}`, inline: false },

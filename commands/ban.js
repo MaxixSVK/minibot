@@ -15,7 +15,6 @@ module.exports = {
                 .setName("reason")
                 .setDescription("Reason of the ban.")),
     async execute(interaction) {
-
         const user = interaction.options.getUser('target');
         const member = await interaction.guild.members.fetch(user.id)
         const reason = interaction.options.getString("reason") || "No reason provided";
@@ -28,7 +27,7 @@ module.exports = {
         const banembed = new EmbedBuilder()
             .setColor("Green")
             .setTitle("Banned")
-            .setDescription(`The ${user} was banned from server`)
+            .setDescription(`The ${user} was banned from server.`)
             .addFields(
                 { name: "Reason:", value: `${reason}`, inline: true },
             )

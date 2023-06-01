@@ -1,4 +1,4 @@
-const { Events } = require('discord.js');
+const { Events, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: Events.InteractionCreate,
@@ -16,10 +16,16 @@ module.exports = {
             await command.execute(interaction);
         } catch (error) {
             console.error(error);
+
+            const errorembed = new EmbedBuilder()
+            .setColor("Red")
+            .setTitle("ERROR")
+            .setDescription(`There was an error while executing this command!\n Please contact the bot developer.`)
+
             if (interaction.replied || interaction.deferred) {
-                await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
+                await interaction.followUp({ embeds: [errorembed], ephemeral: true });
             } else {
-                await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                await interaction.reply({ embeds: [errorembed], ephemeral: true });
             }
         }
     }

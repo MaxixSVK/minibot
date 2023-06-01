@@ -15,10 +15,8 @@ module.exports = {
                 .setName("reason")
                 .setDescription("Reason of the kick.")),
     async execute(interaction) {
-
         const user = interaction.options.getUser('target');
         const reason = interaction.options.getString("reason") || "No reason provided";
-
         const member = await interaction.guild.members.fetch(user.id)
 
         const lowembed = new EmbedBuilder()
@@ -29,7 +27,7 @@ module.exports = {
         const kickembed = new EmbedBuilder()
             .setColor("Green")
             .setTitle("Kicked")
-            .setDescription(`The ${user} was kicked from server`)
+            .setDescription(`The ${user} was kicked from server.`)
             .addFields(
                 { name: "Reason:", value: `${reason}`, inline: true },
             )

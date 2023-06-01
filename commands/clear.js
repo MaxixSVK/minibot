@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder} = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -12,7 +12,6 @@ module.exports = {
                 .setRequired(true)),
 
     async execute(interaction) {
-
         const amount = interaction.options.getInteger("amount")
 
         const errorembed = new EmbedBuilder()

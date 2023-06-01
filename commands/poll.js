@@ -29,7 +29,6 @@ module.exports = {
                 .setName("option4")
                 .setDescription("Option4")),
     async execute(interaction) {
-
         const title = interaction.options.getString("title");
         const option1 = interaction.options.getString("option1");
         const option2 = interaction.options.getString("option2");
@@ -39,29 +38,17 @@ module.exports = {
         const pollembed12 = new EmbedBuilder()
             .setColor(config.Color)
             .setTitle(`${title}`)
-            .setDescription(`
-1: ${option1}
-2: ${option2}
-`)
+            .setDescription(`1: ${option1}\n2: ${option2}`)
 
         const pollembed123 = new EmbedBuilder()
             .setColor(config.Color)
             .setTitle(`${title}`)
-            .setDescription(`
-1: ${option1}
-2: ${option2}
-3: ${option3}
-`)
+            .setDescription(`1: ${option1}\n2: ${option2}\n3: ${option3}`)
 
         const pollembed1234 = new EmbedBuilder()
             .setColor(config.Color)
             .setTitle(`${title}`)
-            .setDescription(`
-1: ${option1}
-2: ${option2}
-3: ${option3}
-4: ${option4}
-`)
+            .setDescription(`1: ${option1}\n2: ${option2}\n3: ${option3}\n4: ${option4}`)
 
         if ((option1) && (option2)) {
             if (option3) {

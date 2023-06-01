@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, ChannelType, EmbedBuilder, PermissionsBitField, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
+const {  SlashCommandBuilder, ChannelType, EmbedBuilder, PermissionsBitField, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require("discord.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -69,7 +69,6 @@ module.exports = {
                 ticketchannel.send({ embeds: [ticketmessageembed], components: [createticketbutton] });
                }, 1500);
             }
-
 
         await interaction.followUp({ embeds: [setupembed] });
     },

@@ -31,10 +31,11 @@ module.exports = {
 
         const reportedembed = new EmbedBuilder()
         .setTitle(`The user has been reported`)
-        .setDescription(`Reason: ${reason}`)
+        .setDescription(`<@${interaction.member.id}> reported a user using report command.`)
         .setColor("Red")
         .addFields(
-            { name: "Reported user:", value: `${target}`, inline: true },
+            { name: "Which user has been reported:", value: `${target}`, inline: false },
+            { name: "Reason:", value: `${reason}`, inline: false },
         )
 
         const sentembed = new EmbedBuilder()

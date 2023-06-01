@@ -17,13 +17,12 @@ module.exports = {
 
         ),
     async execute(interaction) {
-
         const word = interaction.options.getString("word");
 
         const successembed = new EmbedBuilder()
             .setColor("Green")
             .setTitle("Success")
-            .setDescription(`Changes have been implemented`)
+            .setDescription(`Changes have been implemented.`)
 
         const { guild, options } = interaction
         const sub = options.getSubcommand();
