@@ -6,9 +6,11 @@ module.exports = {
         if (!interaction.isButton()) return;
 
         if (interaction.customId === "CreateTicket") {
-            let x = Math.floor((Math.random() * 100000) + 1);
+            const interactionuser = await interaction.guild.members.fetch(interaction.user.id)
+            const username = interactionuser.user.username
+            
             interaction.guild.channels.create({
-                name: `Ticket${x}`,
+                name: `Ticket-${username}`,
                 type: ChannelType.GuildText,
                 permissionOverwrites: [
                     {
