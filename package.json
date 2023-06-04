@@ -1,6 +1,6 @@
 {
   "name": "mini-bot",
-  "version": "0.3",
+  "version": "0.3.1",
   "description": "Discord bot made in discord.js v14 with support for slash commands, open ai api, discord build in automod and more.",
   "main": "index.js",
   "scripts": {
