@@ -35,7 +35,7 @@ module.exports = {
             );
 
         if ((reportschannel) && (ticketchannel)) {
-            interaction.reply({ embeds: [alredyembed] });
+            interaction.followUp({ embeds: [alredyembed] });
             return
         }
 
