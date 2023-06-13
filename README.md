@@ -18,7 +18,7 @@ Please note that this bot is still under development
 
  - You need to have [node.js](https://nodejs.org/) installed on your machine (tested version 18.16.0)
 
- - Clone repository or download ZIP
+ - Clone repository (or for more stable experience you can download newest release)
 ```
 git clone https://github.com/MaxixSVK/minibot
 ``` 
