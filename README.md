@@ -37,7 +37,7 @@ OPENAI_API_KEY=your open ai api key
 ```
 - Deploy slash commands
 ```
-node deploy-commands.js
+node deployCommands.js
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ node .
 - After deleting or adding slash commands
 
 ```
-node deploy-commands.js
+node deployCommands.js
 ```
 
 - Setup bot on server (slash command)
