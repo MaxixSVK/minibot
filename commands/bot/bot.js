@@ -12,7 +12,7 @@ module.exports = {
             .setURL("https://github.com/MaxixSVK/minibot")
             .setDescription("ALPHA version")
             .addFields(
-                { name: "Version:", value: "0.4.1", inline: true },
+                { name: "Version:", value: "0.4.2", inline: true },
                 { name: "Author:", value: "Maxix", inline: true },
             )
             .setImage("https://i.imgur.com/AfFp7pu.png")

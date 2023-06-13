@@ -1,6 +1,6 @@
 {
   "name": "minibot",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Discord bot made in discord.js v14 with support for slash commands, open ai api, discord build in automod and more.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.11.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.4",
     "ms": "^2.1.3",
     "openai": "^3.2.1"
   },
