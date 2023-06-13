@@ -13,7 +13,6 @@ module.exports = {
     async execute(interaction) {
         const user = interaction.options.getUser("user");
         const created = Math.floor(user.createdTimestamp/1000)
-        const joined = user.joinedAt
 
         const userembed = new EmbedBuilder()
             .setColor(config.Color)
