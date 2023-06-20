@@ -43,7 +43,7 @@ node deployCommands.js
 ## Usage
  - Start a bot
 ```
-node .
+npm start
 ```
 - After deleting or adding slash commands
 

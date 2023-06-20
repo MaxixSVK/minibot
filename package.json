@@ -4,7 +4,7 @@
   "description": "Discord bot made in discord.js v14 with support for slash commands, open ai api, discord build in automod and more.",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node index.js"
   },
   "author": "Maxix",
   "license": "MIT",
