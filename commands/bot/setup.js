@@ -23,7 +23,7 @@ module.exports = {
 
         const ticketmessageembed = new EmbedBuilder()
             .setTitle("Ticket")
-            .setDescription("A rigt way to contact a server support.")
+            .setDescription("A right way to contact a server support.")
             .setColor("Green")
 
         const createticketbutton = new ActionRowBuilder()
