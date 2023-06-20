@@ -10,10 +10,9 @@ module.exports = {
             .setColor(config.Color)
             .setTitle("Mini bot")
             .setURL("https://github.com/MaxixSVK/minibot")
-            .setDescription("ALPHA version")
             .addFields(
-                { name: "Version:", value: "0.4.2", inline: true },
-                { name: "Author:", value: "Maxix", inline: true },
+                { name: ":speech_balloon: Version:", value: "0.4.2", inline: true },
+                { name: ":busts_in_silhouette: Author:", value: "Maxix", inline: true },
             )
             .setImage("https://i.imgur.com/AfFp7pu.png")
 
