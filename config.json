@@ -1,5 +1,4 @@
 {
-    "ActivityName": "users :)", 
-    "StatusType": "online",
+    "CommandsListOnStartup": true,
     "Color": "#5865F2"
 }

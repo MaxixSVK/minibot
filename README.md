@@ -62,10 +62,10 @@ node deployCommands.js
 git clone https://github.com/MaxixSVK/discord-bot-web-template
 ```
 ## Customization
- - For easy customization you can edit confing.json
+ - In config.js you can set global color for embeds
 
 ## Future updates
- - Better Ticket system
+ - More easy customization
  - New automoderation features
 
 ## Contributing
