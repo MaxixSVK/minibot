@@ -6,74 +6,60 @@ module.exports = {
         .setName("poll")
         .setDescription("Make a poll.")
         .addStringOption(option =>
-			option
-				.setName("title")
-				.setDescription("This will be title of the poll.")
-				.setRequired(true))
-        .addStringOption(option =>
             option
-                .setName("option1")
-                .setDescription("Option1")
+                .setName("title")
+                .setDescription("This will be title of the poll.")
                 .setRequired(true))
         .addStringOption(option =>
             option
-                .setName("option2")
-                .setDescription("Option2")
+                .setName("option-1")
+                .setDescription("This will be option 1 in poll. (Required)")
                 .setRequired(true))
         .addStringOption(option =>
             option
-                .setName("option3")
-                .setDescription("Option3"))
+                .setName("option-2")
+                .setDescription("This will be option 2 in poll. (Required)")
+                .setRequired(true))
         .addStringOption(option =>
             option
-                .setName("option4")
-                .setDescription("Option4")),
+                .setName("option-3")
+                .setDescription("This will be option 3 in poll."))
+        .addStringOption(option =>
+            option
+                .setName("option-4")
+                .setDescription("This will be option 4 in poll.")),
     async execute(interaction) {
-        const title = interaction.options.getString("title");
-        const option1 = interaction.options.getString("option1");
-        const option2 = interaction.options.getString("option2");
-        const option3 = interaction.options.getString("option3");
-        const option4 = interaction.options.getString("option4");
+        var discordinput = ["title", "option-1", "option-2", "option-3", "option-4"]
+        var embedtext = []
 
-        const pollembed12 = new EmbedBuilder()
-            .setColor(config.Color)
-            .setTitle(`${title}`)
-            .setDescription(`1: ${option1}\n2: ${option2}`)
+        for (var optionname of discordinput) {
+            var discordinput = interaction.options.getString(optionname)
+            embedtext.push(discordinput)
+        }
 
-        const pollembed123 = new EmbedBuilder()
-            .setColor(config.Color)
-            .setTitle(`${title}`)
-            .setDescription(`1: ${option1}\n2: ${option2}\n3: ${option3}`)
+        var pollembed = new EmbedBuilder()
+        .setColor(config.Color)
+        .setTitle(`${embedtext[0]}`)
+        if (embedtext[4]) {
+            pollembed.setDescription(`1: ${embedtext[1]}\n2: ${embedtext[2]}\n3: ${embedtext[3]}\n4: ${embedtext[4]}`)
+        }
+        else if (embedtext[3]) {
+            pollembed.setDescription(`1: ${embedtext[1]}\n2: ${embedtext[2]}\n3: ${embedtext[3]}`)
+        }
+        else {
+            pollembed.setDescription(`1: ${embedtext[1]}\n2: ${embedtext[2]}`)
+        }
 
-        const pollembed1234 = new EmbedBuilder()
-            .setColor(config.Color)
-            .setTitle(`${title}`)
-            .setDescription(`1: ${option1}\n2: ${option2}\n3: ${option3}\n4: ${option4}`)
-
-        if ((option1) && (option2)) {
-            if (option3) {
-                if (option4) {
-                    interaction.reply({ embeds: [pollembed1234] })
-                    const replied = await interaction.fetchReply();
-                    replied.react("1️⃣");
-                    replied.react("2️⃣");
-                    replied.react("3️⃣");
-                    replied.react("4️⃣");
-                    return
-                }
-                else {
-                    interaction.reply({ embeds: [pollembed123] })
-                    const replied = await interaction.fetchReply();
-                    replied.react("1️⃣");
-                    replied.react("2️⃣");
-                    replied.react("3️⃣");
-                    return
-                }
-            }
-            interaction.reply({ embeds: [pollembed12] })
-            const replied = await interaction.fetchReply();
-            replied.react("1️⃣");
-            replied.react("2️⃣");
+        interaction.reply({ embeds: [pollembed] })
+        var messagereact = await interaction.fetchReply();
+        messagereact.react("1️⃣");
+        messagereact.react("2️⃣");
+        if (embedtext[4]) {
+            messagereact.react("3️⃣");
+            messagereact.react("4️⃣");
+        }
+        else if (embedtext[3]) {
+            messagereact.react("3️⃣");
         }
     }
 }
