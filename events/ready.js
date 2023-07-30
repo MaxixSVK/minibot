@@ -12,9 +12,9 @@ module.exports = {
             const folders = fs.readdirSync('commands');
 
             for (const folderjs of folders) {
-                const filesjslog = fs.readdirSync('commands/' + folderjs);
+                const filesjslog = fs.readdirSync('commands/' + folderjs).filter(file => file.endsWith(".js"));
                 console.log(folderjs.toUpperCase())
-                console.log(filesjslog)
+                console.log(filesjslog.toString().replaceAll(".js,", " "))
             }     
             console.log("----------------------------------")
             console.log("") 
