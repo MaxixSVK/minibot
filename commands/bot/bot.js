@@ -11,7 +11,7 @@ module.exports = {
             .setTitle("Mini bot")
             .setURL("https://github.com/MaxixSVK/minibot")
             .addFields(
-                { name: ":speech_balloon: Version:", value: "0.4.3", inline: true },
+                { name: ":speech_balloon: Version:", value: "0.4.4", inline: true },
                 { name: ":busts_in_silhouette: Author:", value: "Maxix", inline: true },
             )
             .setImage("https://i.imgur.com/AfFp7pu.png")
