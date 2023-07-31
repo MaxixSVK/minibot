@@ -33,7 +33,7 @@ module.exports = {
         var embedtext = []
 
         for (var optionname of discordinput) {
-            var discordinput = interaction.options.getString(optionname)
+            discordinput = interaction.options.getString(optionname)
             embedtext.push(discordinput)
         }
 
