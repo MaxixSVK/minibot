@@ -20,8 +20,8 @@ Please note that this bot is still under development
  - Clone repository (or for more stable experience you can download newest release)
 ```
 git clone https://github.com/MaxixSVK/minibot
+```
 
-``` 
 - Install dependencies:
 ```
 npm install
